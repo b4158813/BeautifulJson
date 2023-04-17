@@ -7,8 +7,8 @@
 ## 使用方式 （Mac OS系统）
 
 ### 安装docker环境
-代码默认使用docker镜像本地部署plantuml服务，部署方式参考[github/plantuml-server](https://github.com/plantuml/plantuml-server)
-利用jetty容器启动plantuml服务
+代码默认使用docker镜像本地部署plantuml服务，部署命令：
+（参考[github/plantuml-server](https://github.com/plantuml/plantuml-server)利用jetty容器启动plantuml服务）
 ``` shell
 docker run -d -p 8080:8080 --read-only -v /tmp/jetty plantuml/plantuml-server:jetty
 ```

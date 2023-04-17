@@ -1,6 +1,8 @@
 # BeautifulJson
 
 ## 简介
+本项目基于plantuml([github/plantuml-server](https://github.com/plantuml/plantuml-server))
+
 支持将`.json`格式文件转换成为一个非常直观简洁的`.png`格式的可视化图像，如下图所示：
 ![BeautifulJson](test.png)
 

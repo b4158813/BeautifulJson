@@ -1,0 +1,70 @@
+{
+  "code": "0",
+  "message": "OK",
+  "data_timestamp": "1681290089",
+  "data_time": "2023-04-13 20:38:03",
+  "sid": "666666666666",
+  "status": "active",
+  "streams": {
+    "info": {
+      "vhost": "__defaultVhost__",
+      "begin_push_timestamp": "1681389483229",
+      "begin_push_time": "2023-04-13 20:38:03",
+      "push_domain": "klms.xiaohongshu.com",
+      "app_name": "/app",
+      "client_ip": "11.11.11.11",
+      "server_ip": "22.22.22.22",
+      "region": "cn-sh",
+      "video": {
+        "codec": "H264",
+        "fps": "25",
+        "rate": "666kbps",
+        "width": "1280",
+        "height": "720",
+        "profile": "High"
+      },
+      "audio": {
+        "codec": "AAC",
+        "rate": "44100Hz",
+        "channel": "2",
+        "profile": "LC"
+      },
+      "local_ts": "1681290089",
+      "video_ts": "1681290089",
+      "audio_ts": "1681290089",
+      "stream_params": ""
+    },
+    "system": {
+      "cpu_percent": "0.06",
+      "mem_ram_percent": "0.23",
+      "disk_read_KBps": "0",
+      "disk_write_KBps": "24",
+      "net_recv_bytes": "0",
+      "ner_send_bytes": "0"
+    },
+    "transcode": {
+      "hhd": {
+        "active": "true",
+        "tasks": [
+          {
+            "com": "red",
+            "cmd": "ffmpeg xxx",
+            "worker_ip": "xx.xx.xx.xx",
+            "extra": {}
+          },
+          {}
+        ]
+      },
+      "...": ""
+    },
+    "actions": [
+      {
+        "publish_time": "16811991248",
+        "unpublish_time": "1681212412",
+        "client_ip": "11.11.11.11",
+        "server_ip": "22.22.22.22"
+      },
+      "..."
+    ]
+  }
+}

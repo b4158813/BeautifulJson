@@ -13,7 +13,6 @@ class BeautifulJson():
         self.s = "@startjson\n" + json_str + "\n@endjson"
 
         self.OnlineUrl = "https://www.plantuml.com/plantuml"
-        self.OfflineUrl = f"http://127.0.0.1:{offline_port}"
 
     def Genb64Str(self):
         compressor = zopfli.ZopfliDeflater()
@@ -26,8 +25,8 @@ class BeautifulJson():
     def GenUrlOnline(self, b64str: str, format: str = "svg"):
         return f"{self.OnlineUrl}/{format}/{b64str}" 
 
-    def GenUrlOffline(self, b64str: str, format: str = "svg"):
-        return f"{self.OfflineUrl}/{format}/{b64str}"
+    def GenUrlOffline(self, b64str: str, offline_port: str = "8080", format: str = "svg"):
+        return f"http://127.0.0.1:{offline_port}/{format}/{b64str}"
     
     def GenPng(self, url: str, outputname: str):
         response = requests.get(url)
@@ -91,12 +90,12 @@ if __name__ == "__main__":
     # json_filename = "streams/streams.json"
     json_filename = args.filename
 
-    output_filename = json_filename.split('.')[-2] + ".png"
+    output_filename = json_filename[:-5] + ".png"
     solution = BeautifulJson(json_filename)
     # print(solution.s)
     b64str = solution.Genb64Str()
-    url = solution.GenUrlOnline(b64str) # 使用官方的在线服务器
-    # url = solution.GenUrlOffline(b64str) # 使用本地docker部署的服务器
+    # url = solution.GenUrlOnline(b64str) # 使用官方的在线服务器
+    url = solution.GenUrlOffline(b64str, "8080") # 使用本地docker部署的服务器
     print(url)
     solution.GenPng(url, output_filename)
 

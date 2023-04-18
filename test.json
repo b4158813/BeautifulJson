@@ -5,7 +5,7 @@
   "data_time": "2023-04-13 20:38:03",
   "sid": "666666666666",
   "status": "active",
-  "streams": {
+  "stream": {
     "info": {
       "vhost": "__defaultVhost__",
       "begin_push_timestamp": "1681389483229",

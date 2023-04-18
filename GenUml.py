@@ -87,10 +87,10 @@ if __name__ == "__main__":
     parser.add_argument('filename', help='the input file')
     args = parser.parse_args()
 
-    # json_filename = "streams/streams.json"
+    # json_filename = "test.json"
     json_filename = args.filename
 
-    output_filename = json_filename[:-5] + ".png"
+    output_filename = json_filename.split(".json")[0] + ".png"
     solution = BeautifulJson(json_filename)
     # print(solution.s)
     b64str = solution.Genb64Str()
